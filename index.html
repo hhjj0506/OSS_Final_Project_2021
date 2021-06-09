@@ -18,35 +18,34 @@
             <div class="row">
                 <!-- website introduction will go here -->
             </div>
-            <form>
-                <div class="form-group row">
-                    <label for="bench" class="col-sm-2 col-form-label">Bench Press</label>
-                    <div class="col-sm-4">
-                        <input type="number" class="form-control" id="benchInput" placeholder="Enter you max bench weight">
+            <div class="row" id="sbdForm">
+                <form>
+                    <div class="form-group row">
+                        <label for="bench" class="col-sm-2 col-form-label">Bench Press</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="benchInput" placeholder="Enter you max bench weight">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="squat" class="col-sm-2 col-form-label">Squat</label>
-                    <div class="col-sm-4">
-                        <input type="number" class="form-control" id="squatInput" placeholder="Enter you max squat weight">
+                    <div class="form-group row">
+                        <label for="squat" class="col-sm-2 col-form-label">Squat</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="squatInput" placeholder="Enter you max squat weight">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="dead" class="col-sm-2 col-form-label">Deadlift</label>
-                    <div class="col-sm-4">
-                        <input type="number" class="form-control" id="deadInput" placeholder="Enter you max deadlift weight">
+                    <div class="form-group row">
+                        <label for="dead" class="col-sm-2 col-form-label">Deadlift</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="deadInput" placeholder="Enter you max deadlift weight">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-3">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <button type="button" onclick="calcWeight()" class="btn btn-primary">Calculate</button>
+                        </div>
                     </div>
-                    <div class="col-sm-3">
-                        <button type="button" onclick="calcWeight()" class="btn btn-primary">Calculate</button>
-                    </div>
-                </div>
-            </form>
-            <h1>Your total SBD weight is <p id="dis"></p> </h1>
+                </form>
+                <h1>Your total SBD weight is <p id="dis"></p> </h1>
+            </div>
             <footer>
                 <a>Please contact me if you have any questions!</a>
             </footer>
@@ -54,11 +53,14 @@
 
         <script>
             function calcWeight() {
-                var bench = document.getElementById("benchInput").value;
-                var squat = document.getElementById("squatInput").value;
-                var dead = document.getElementById("deadInput").value;
-                var total = bench + squat + dead;
-                document.getElementById("dis").innerHTML = bench + "KG";
+                document.getElementById("benchInput").submit;
+                document.getElementById("squatInput").submit;
+                document.getElementById("deadInput").submit;
+                var bench = parseInt(document.getElementById("benchInput").value, 10);
+                var squat = parseInt(document.getElementById("squatInput").value, 10);
+                var dead = parseInt(document.getElementById("deadInput").value, 10);
+                var total = (bench + squat + dead);
+                document.getElementById("dis").innerHTML = total + "KG";
             }
         </script>
     </body>
