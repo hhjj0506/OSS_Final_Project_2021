@@ -11,13 +11,55 @@
         <div class="container">
             <h1 id="title">Weight Training Helper</h1>
             <div class="row">
-                <div class="col-sm-4"><p>Hello1</p></div>
-                <div class="col-sm-4"><p>Hello 2</p></div>
-                <div class="col-sm-4"><p>Hello people</p></div>
+                <div class="col-sm-4"><a href="index.html">Main</a></div>
+                <div class="col-sm-4"><a href="calc.html">Tools</a></div>
+                <div class="col-sm-4"><a href="youtube.html">Videos</a></div>
             </div>
-            <div class="">
-
+            <div class="row">
+                <!-- website introduction will go here -->
             </div>
+            <form>
+                <div class="form-group row">
+                    <label for="bench" class="col-sm-2 col-form-label">Bench Press</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="benchInput" placeholder="Enter you max bench weight">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="squat" class="col-sm-2 col-form-label">Squat</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="squatInput" placeholder="Enter you max squat weight">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dead" class="col-sm-2 col-form-label">Deadlift</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="deadInput" placeholder="Enter you max deadlift weight">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" onclick="calcWeight()" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </form>
+            <h1>Your total SBD weight is <p id="dis"></p> </h1>
+            <footer>
+                <a>Please contact me if you have any questions!</a>
+            </footer>
         </div>
+
+        <script>
+            function calcWeight() {
+                var bench = document.getElementById("benchInput").value;
+                var squat = document.getElementById("squatInput").value;
+                var dead = document.getElementById("deadInput").value;
+                var total = bench + squat + dead;
+                document.getElementById("dis").innerHTML = bench + "KG";
+            }
+        </script>
     </body>
 </html>
