@@ -1,5 +1,6 @@
 .container {
-    border-color: black;
+    border-color: white;
+    background-color: white;
 }
 
 #title {
@@ -27,4 +28,8 @@ a:hover {
 
 #sbdForm {
     text-align: center;
+}
+
+body {
+    background-color: black;
 }
