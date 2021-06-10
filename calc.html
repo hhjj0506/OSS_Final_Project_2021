@@ -17,25 +17,58 @@
             </div>
             <hr>
             <div class="row">
-                <h2>Useful tools for your workout</h2>
+                <h2>Useful tools for your workout!!</h2>
             </div>
             <br>
             <br>
             <div class="row" id="sbdForm">
                 <form>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-5">
                             <h3>Max Rep Calculator</h3>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-6">
+                            <h3>Volume Comparison Calculator</h3>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5" id="repForm">
                             Weight<input type="number" class="form-control" id="repWeight" placeholder="Enter how much you can lift">
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            Repetition<input type="number" class="form-control" id="repNum" placeholder="Enter how many times you can lift (=<20)">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            Weight 1<input type="number" class="form-control" id="compW1" placeholder="Enter weight for first workout">
+                        </div>
+                        <div class="col-sm-3">
+                            Weight 2<input type="number" class="form-control" id="compW2" placeholder="Enter weight for second workout">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
+                            Repetition<input type="number" class="form-control" id="repNum" placeholder="Enter how many times you can lift (=<20)">
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            Rep 1<input type="number" class="form-control" id="compR1" placeholder="Enter repetition for first workout">
+                        </div>
+                        <div class="col-sm-3">
+                            Rep 2<input type="number" class="form-control" id="compR2" placeholder="Enter repetition for second workout">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            Set 1<input type="number" class="form-control" id="compS1" placeholder="Enter set for first workout">
+                        </div>
+                        <div class="col-sm-3">
+                            Set 2<input type="number" class="form-control" id="compS2" placeholder="Enter set for second workout">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5">
                             <br>
                             <button type="button" onclick="calcOneRep()" class="btn btn-primary">Calculate</button>
                             <h3>Your 1 rep maximum weight is <p id="onerep"></p> </h3>
@@ -72,8 +105,18 @@
                                 </tr>
                             </table>
                         </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-6">
+                            <br>
+                            <button type="button" onclick="compare()" class="btn btn-primary">Calculate</button>
+                            <br>
+                            <h4>Total Volume of First Workout: <p id="work1"></p></h4>
+                            <h4>Total Volume of Second Workout: <p id="work2"></p></h4>
+                            <h4 id="comp"></h4>
+                        </div>
                     </div>
                 </form>
+                
                 <br>
                 <br>
                 <br>
@@ -86,50 +129,6 @@
                 Instagram - <a href="https://instagram.com/daviid.k">@daviid.k</a></p>
             </footer>
         </div>
-
-        <script>
-            function calcOneRep() {
-                document.getElementById("repWeight").submit;
-                document.getElementById("repNum").submit;
-                var weight = parseInt(document.getElementById("repWeight").value, 10);
-                var rep = parseInt(document.getElementById("repNum").value, 10);
-                var max = 0;
-                switch (rep) {
-                    case 1: max = weight; break;
-                    case 2: max = weight * 1.028; break;
-                    case 3: max = weight * 1.058; break;
-                    case 4: max = weight * 1.091; break;
-                    case 5: max = weight * 1.125; break;
-                    case 6: max = weight * 1.160; break;
-                    case 7: max = weight * 1.2; break;
-                    case 8: max = weight * 1.241; break;
-                    case 9: max = weight * 1.287; break;
-                    case 10: max = weight * 1.332; break;
-                    case 11: max = weight * 1.366; break;
-                    case 12: max = weight * 1.399; break;
-                    case 13: max = weight * 1.433; break;
-                    case 14: max = weight * 1.466; break;
-                    case 15: max = weight * 1.5; break;
-                    case 16: max = weight * 1.532; break;
-                    case 17: max = weight * 1.567; break;
-                    case 18: max = weight * 1.6; break;
-                    case 19: max = weight * 1.632; break;
-                    case 20: max = weight * 1.666; break;
-                }
-                var one = max;
-                var three = max * 0.94;
-                var five = max * 0.89;
-                var ten = max * 0.75;
-                var twenty = max * 0.6;
-
-                document.getElementById("oneRW").innerHTML = one.toFixed(0) + " KG";
-                document.getElementById("twoRW").innerHTML = three.toFixed(0) + " KG";
-                document.getElementById("threeRW").innerHTML = five.toFixed(0) + " KG";
-                document.getElementById("fourRW").innerHTML = ten.toFixed(0) + " KG";
-                document.getElementById("fiveRW").innerHTML = twenty.toFixed(0) + " KG";
-                document.getElementById("onerep").innerHTML = max.toFixed(0) + " KG";
-                
-            }
-        </script>
+        <script src="js/calc.js"></script>
     </body>
 </html>
