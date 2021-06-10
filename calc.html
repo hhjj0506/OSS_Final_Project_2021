@@ -2,6 +2,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
         <title>Weight Training Helper</title>
@@ -71,6 +73,8 @@
                         <div class="col-sm-5">
                             <br>
                             <button type="button" onclick="calcOneRep()" class="btn btn-primary">Calculate</button>
+                            <br>
+                            <br>
                             <h3>Your 1 rep maximum weight is <p id="onerep"></p> </h3>
                             <table>
                                 <tr>
@@ -110,13 +114,48 @@
                             <br>
                             <button type="button" onclick="compare()" class="btn btn-primary">Calculate</button>
                             <br>
+                            <br>
                             <h4>Total Volume of First Workout: <p id="work1"></p></h4>
                             <h4>Total Volume of Second Workout: <p id="work2"></p></h4>
                             <h4 id="comp"></h4>
                         </div>
                     </div>
+                    <br>
+                    <br>
                 </form>
-                
+                <form>
+                    <div class="row">
+                        <h3>Warmup Calculator</h3>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            Weight<input type="number" class="form-control" id="warmup" placeholder="Enter weight for first workout">
+                            <br>
+                            Choose Exercise
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                            <button type="button" onclick="squat()" class="btn btn-primary">Squat</button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" onclick="bench()" class="btn btn-primary">Bench Press</button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" onclick="dead()" class="btn btn-primary">Deadlift</button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" onclick="overhead()" class="btn btn-primary">Overhead Press</button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" onclick="bRow()" class="btn btn-primary">Barbell Row</button>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </form>
                 <br>
                 <br>
                 <br>

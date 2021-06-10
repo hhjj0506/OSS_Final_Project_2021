@@ -73,7 +73,22 @@ function compare() {
     } else {
         document.getElementById("comp").innerHTML = "Both workout have same volume.";
     }
+}
 
-    
-    
+function squat() {
+    document.getElementById("warmup").submit;
+
+    var weight = parseInt(document.getElementById("warmup").value);
+
+    var one = 20;
+    var two = weight * 0.4;
+    var three = weight * 0.6;
+    var four = weight * 0.8;
+    var five = weight;
+
+    document.getElementById("work1").innerHTML = one + "KG";
+    document.getElementById("work1").innerHTML = two + "KG";
+    document.getElementById("work1").innerHTML = three + "KG";
+    document.getElementById("work1").innerHTML = four + "KG";
+    document.getElementById("work1").innerHTML = five + "KG";
 }
