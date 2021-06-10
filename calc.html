@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+        <title>Weight Training Helper</title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <div class="container">
+            <h1 id="title">Weight Training Helper</h1>
+            <div class="row">
+                <div class="col-sm-4"><a href="index.html">Main</a></div>
+                <div class="col-sm-4"><a href="calc.html">Tools</a></div>
+                <div class="col-sm-4"><a href="youtube.html">Videos</a></div>
+            </div>
+            <hr>
+            <div class="row">
+                <h2>Useful tools for your workout</h2>
+            </div>
+            <br>
+            <br>
+            <div class="row" id="sbdForm">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <h3>Max Rep Calculator</h3>
+                            Weight<input type="number" class="form-control" id="repWeight" placeholder="Enter how much you can lift">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            Repetition<input type="number" class="form-control" id="repNum" placeholder="Enter how many times you can lift (=<20)">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <br>
+                            <button type="button" onclick="calcOneRep()" class="btn btn-primary">Calculate</button>
+                            <h3>Your 1 rep maximum weight is <p id="onerep"></p> </h3>
+                            <table>
+                                <tr>
+                                    <th>Repetition</th>
+                                    <th>Weight  </th>
+                                    <th>Percentage</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th id="oneRW"></th>
+                                    <th>100%</th>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <th id="twoRW"></th>
+                                    <th>94%</th>
+                                </tr>
+                                <tr>
+                                    <th>5</th>
+                                    <th id="threeRW"></th>
+                                    <th>89%</th>
+                                </tr>
+                                <tr>
+                                    <th>10</th>
+                                    <th id="fourRW"></th>
+                                    <th>75%</th>
+                                </tr>
+                                <tr>
+                                    <th>20</th>
+                                    <th id="fiveRW"></th>
+                                    <th>60%</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <br>
+                <br>
+            </div>
+            <hr>
+            <footer>
+                <p>Please contact me if you have any questions!</p>
+                <p>Email - hhjj0506@gmail.com
+                Github - <a href="https://github.com/hhjj0506">@hhjj0506</a>
+                Instagram - <a href="https://instagram.com/daviid.k">@daviid.k</a></p>
+            </footer>
+        </div>
+
+        <script>
+            function calcOneRep() {
+                document.getElementById("repWeight").submit;
+                document.getElementById("repNum").submit;
+                var weight = parseInt(document.getElementById("repWeight").value, 10);
+                var rep = parseInt(document.getElementById("repNum").value, 10);
+                var max = 0;
+                switch (rep) {
+                    case 1: max = weight; break;
+                    case 2: max = weight * 1.028; break;
+                    case 3: max = weight * 1.058; break;
+                    case 4: max = weight * 1.091; break;
+                    case 5: max = weight * 1.125; break;
+                    case 6: max = weight * 1.160; break;
+                    case 7: max = weight * 1.2; break;
+                    case 8: max = weight * 1.241; break;
+                    case 9: max = weight * 1.287; break;
+                    case 10: max = weight * 1.332; break;
+                    case 11: max = weight * 1.366; break;
+                    case 12: max = weight * 1.399; break;
+                    case 13: max = weight * 1.433; break;
+                    case 14: max = weight * 1.466; break;
+                    case 15: max = weight * 1.5; break;
+                    case 16: max = weight * 1.532; break;
+                    case 17: max = weight * 1.567; break;
+                    case 18: max = weight * 1.6; break;
+                    case 19: max = weight * 1.632; break;
+                    case 20: max = weight * 1.666; break;
+                }
+                var one = max;
+                var three = max * 0.94;
+                var five = max * 0.89;
+                var ten = max * 0.75;
+                var twenty = max * 0.6;
+
+                document.getElementById("oneRW").innerHTML = one.toFixed(0) + " KG";
+                document.getElementById("twoRW").innerHTML = three.toFixed(0) + " KG";
+                document.getElementById("threeRW").innerHTML = five.toFixed(0) + " KG";
+                document.getElementById("fourRW").innerHTML = ten.toFixed(0) + " KG";
+                document.getElementById("fiveRW").innerHTML = twenty.toFixed(0) + " KG";
+                document.getElementById("onerep").innerHTML = max.toFixed(0) + " KG";
+                
+            }
+        </script>
+    </body>
+</html>

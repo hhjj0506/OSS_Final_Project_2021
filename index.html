@@ -15,6 +15,7 @@
                 <div class="col-sm-4"><a href="calc.html">Tools</a></div>
                 <div class="col-sm-4"><a href="youtube.html">Videos</a></div>
             </div>
+            <hr>
             <div class="row">
                 <!-- website introduction will go here -->
                 <h2>Welcome to Weight Training Helper!</h2>
@@ -23,48 +24,73 @@
             <div class="row" id="sbdForm">
                 <form>
                     <div class="form-group row">
-                        <label for="bench" class="col-sm-2 col-form-label">Bench Press</label>
+                        <div class="col-sm-4"></div>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="benchInput" placeholder="Enter you max bench weight">
+                            Gender <select class="form-control" id="gen">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            Body Weight<input type="number" class="form-control" id="bodyWeight" placeholder="Enter you body weight">
                         </div>
+                        <div class="col-sm-4"></div>
                     </div>
                     <div class="form-group row">
-                        <label for="squat" class="col-sm-2 col-form-label">Squat</label>
+                        <div class="col-sm-4"></div>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="squatInput" placeholder="Enter you max squat weight">
+                            Bench Press<input type="number" class="form-control" id="benchInput" placeholder="Enter you max bench weight">
                         </div>
+                        <div class="col-sm-4"></div>
                     </div>
                     <div class="form-group row">
-                        <label for="dead" class="col-sm-2 col-form-label">Deadlift</label>
+                        <div class="col-sm-4"></div>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="deadInput" placeholder="Enter you max deadlift weight">
+                            Squat<input type="number" class="form-control" id="squatInput" placeholder="Enter you max squat weight">
                         </div>
+                        <div class="col-sm-4"></div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            Deadlift<input type="number" class="form-control" id="deadInput" placeholder="Enter you max deadlift weight">
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <br>
                             <button type="button" onclick="calcWeight()" class="btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </form>
+                <br>
+                <br>
+                <br>
                 <h1>Your total SBD weight is <p id="dis"></p> </h1>
             </div>
+            <hr>
             <footer>
                 <p>Please contact me if you have any questions!</p>
-                <p>Github - <a href="https://github.com/hhjj0506">@hhjj0506</a></p>
-                <p>Instagram - <a href="https://instagram.com/daviid.k">@daviid.k</a></p>
+                <p>Email - hhjj0506@gmail.com
+                Github - <a href="https://github.com/hhjj0506">@hhjj0506</a>
+                Instagram - <a href="https://instagram.com/daviid.k">@daviid.k</a></p>
             </footer>
         </div>
 
         <script>
             function calcWeight() {
+                document.getElementById("gen").submit;
+                document.getElementById("bodyWeight").submit;
                 document.getElementById("benchInput").submit;
                 document.getElementById("squatInput").submit;
                 document.getElementById("deadInput").submit;
+                var weight = parseInt(document.getElementById("bodyWeight").value, 10);
+                var gender = document.getElementById("gen").value;
                 var bench = parseInt(document.getElementById("benchInput").value, 10);
                 var squat = parseInt(document.getElementById("squatInput").value, 10);
                 var dead = parseInt(document.getElementById("deadInput").value, 10);
                 var total = (bench + squat + dead);
-                document.getElementById("dis").innerHTML = total + "KG";
+                document.getElementById("dis").innerHTML = total + " KG";
+                
             }
         </script>
     </body>
