@@ -60,3 +60,8 @@ table {
 .nav-link:hover {
     color: green;
 }
+
+.list-group {
+    margin-left: 400px;
+    margin-right: 400px;
+}
