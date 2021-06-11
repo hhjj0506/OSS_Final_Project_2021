@@ -122,7 +122,7 @@ function dead() {
     var five = weight;
 
     document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
-    document.getElementById("WU2").innerHTML = "SKIP";
+    document.getElementById("WU2").innerHTML = "-";
     document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
     document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
     document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";
@@ -157,7 +157,7 @@ function bRow() {
     var five = weight;
 
     document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
-    document.getElementById("WU2").innerHTML = "SKIP";
+    document.getElementById("WU2").innerHTML = "-";
     document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
     document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
     document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";

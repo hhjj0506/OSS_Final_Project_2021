@@ -48,3 +48,15 @@ table, th, td {
 table {
     border-spacing: 15px;
 }
+
+#mainPara {
+    text-align: left;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: green;
+}
