@@ -19,56 +19,91 @@
             </div>
             <hr>
             <div class="row">
-                <!-- website introduction will go here -->
-                <h2>Welcome to Weight Training Helper!</h2>
-                <p>This website is made to help those people who are in need for</p>
-            </div>
-            <div class="row" id="sbdForm">
-                <form>
-                    <div class="form-group row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                <div class="row">
+                    <!-- website introduction will go here -->
+                    <h2>Welcome to Weight Training Helper</h2>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <p>This website is made to help those people who are looking to start weight training or who are already training.
+                        You can calculate your max lift, warmup sets, and also estimate your current weightlifting level!
+                        There are various Youtube videos including how-to videos and it will recommend routines based on your level.
+                        First, start off by finding out your weightlifting level using the calculator on the right!<br>
+                    (if you don't know what your 1 rep max weight is, please use the calculator in Tools page to find it out.)</p>
+                </div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                <div class="row" id="sbdForm">
+                    <h4>Weightlifting Level Calculator</h4>
+                    <form>
+                        <div class="form-group row">
                             Gender <select class="form-control" id="gen">
-                                <option>Male</option>
-                                <option>Female</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
                             </select>
                             Body Weight<input type="number" class="form-control" id="bodyWeight" placeholder="Enter you body weight">
                         </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
+                        <div class="form-group row">
                             Bench Press<input type="number" class="form-control" id="benchInput" placeholder="Enter you max bench weight">
                         </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
+                        <div class="form-group row">
                             Squat<input type="number" class="form-control" id="squatInput" placeholder="Enter you max squat weight">
                         </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
+                        <div class="form-group row">
                             Deadlift<input type="number" class="form-control" id="deadInput" placeholder="Enter you max deadlift weight">
                         </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-12">
-                            <br>
-                            <button type="button" onclick="calcWeight()" class="btn btn-primary">Calculate</button>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <br>
+                                <button type="button" onclick="calcWeight()" class="btn btn-dark">Calculate</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-                <br>
-                <br>
-                <br>
-                <h1>Your total SBD weight is <p id="dis"></p> </h1>
+                    </form>
+                </div>
             </div>
+        </div>
+            <br>
+            <h2>Your total SBD weight is <p id="dis"></p></h2>
+            <h2>Your weightlifting level is <p id="level"></p></h2>
+            <h2>Where you rank in each exercise</h2>
+            <table class="table">
+                <tr>
+                    <th>Exercise</th>
+                    <th>Beginner</th>
+                    <th>Novice</th>
+                    <th>Intermediate</th>
+                    <th>Advanced</th>
+                    <th>Elite</th>
+                </tr>
+                <tr>
+                    <th>Bench Press</th>
+                    <th id="benchB"></th>
+                    <th id="benchN"></th>
+                    <th id="benchI"></th>
+                    <th id="benchA"></th>
+                    <th id="benchE"></th>
+                </tr>
+                <tr>
+                    <th>Squat</th>
+                    <th id="squatB"></th>
+                    <th id="squatN"></th>
+                    <th id="squatI"></th>
+                    <th id="squatA"></th>
+                    <th id="squatE"></th>
+                </tr>
+                <tr>
+                    <th>Deadlift</th>
+                    <th id="deadB"></th>
+                    <th id="deadN"></th>
+                    <th id="deadI"></th>
+                    <th id="deadA"></th>
+                    <th id="deadE"></th>
+                </tr>
+            </table>
             <hr>
             <footer>
                 <p>Please contact me if you have any questions!</p>

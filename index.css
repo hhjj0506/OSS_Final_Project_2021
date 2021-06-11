@@ -1,7 +1,7 @@
 .container {
     border-color: white;
     border-width: 20px;
-    background-color: grey;
+    background-color: white;
 }
 
 #title {
@@ -32,7 +32,7 @@ a:hover {
 }
 
 body {
-    background-color: grey;
+    background-color: white;
     font-family: 'Rubik', sans-serif;
 }
 
