@@ -30,11 +30,6 @@ function calcWeight() {
     var deadE = 0;
 
     var level = "";
-    var countB = 0;
-    var countN = 0;
-    var countI = 0;
-    var countA = 0;
-    var countE = 0;
 
     // set weights
     if (gender == 1) {
@@ -88,7 +83,47 @@ function calcWeight() {
             deadB = 44; deadN = 81; deadI = 93; deadA = 136; deadE = 176;
         }    
     } else {
-
+        if (weight >= 90) {
+            benchB = 42; benchN = 54; benchI = 62; benchA = 80; benchE = 98;
+            squatB = 39; squatN = 72; squatI = 83; squatA = 110; squatE = 137;
+            deadB = 49; deadN = 89; deadI = 104; deadA = 135; deadE = 165;
+        } else if (weight >= 82) {
+            benchB = 37; benchN = 47; benchI = 55; benchA = 72; benchE = 87;
+            squatB = 34; squatN = 63; squatI = 74; squatA = 98; squatE = 122;
+            deadB = 43; deadN = 79; deadI = 93; deadA = 124; deadE = 149;
+        } else if (weight >= 75) {
+            benchB = 34; benchN = 44; benchI = 51; benchA = 66; benchE = 83;
+            squatB = 32; squatN = 59; squatI = 68; squatA = 91; squatE = 116;
+            deadB = 40; deadN = 73; deadI = 86; deadA = 117; deadE = 145;
+        } else if (weight >= 67) {
+            benchB = 32; benchN = 41; benchI = 48; benchA = 61; benchE = 75;
+            squatB = 29; squatN = 55; squatI = 64; squatA = 84; squatE = 105;
+            deadB = 37; deadN = 68; deadI = 80; deadA = 109; deadE = 134;
+        } else if (weight >= 60) {
+            benchB = 29; benchN = 37; benchI = 43; benchA = 55; benchE = 68;
+            squatB = 27; squatN = 50; squatI = 58; squatA = 76; squatE = 96;
+            deadB = 34; deadN = 62; deadI = 72; deadA = 100; deadE = 124;
+        } else if (weight >= 56) {
+            benchB = 27; benchN = 35; benchI = 41; benchA = 53; benchE = 64;
+            squatB = 25; squatN = 47; squatI = 55; squatA = 73; squatE = 90;
+            deadB = 32; deadN = 59; deadI = 68; deadA = 96; deadE = 119;
+        } else if (weight >= 52) {
+            benchB = 26; benchN = 33; benchI = 39; benchA = 49; benchE = 60;
+            squatB = 24; squatN = 44; squatI = 52; squatA = 68; squatE = 85;
+            deadB = 30; deadN = 55; deadI = 64; deadA = 91; deadE = 115;
+        } else if (weight >= 48) {
+            benchB = 24; benchN = 31; benchI = 36; benchA = 46; benchE = 56;
+            squatB = 22; squatN = 41; squatI = 48; squatA = 64; squatE = 79;
+            deadB = 28; deadN = 52; deadI = 60; deadA = 86; deadE = 110;
+        } else if (weight >= 44) {
+            benchB = 22; benchN = 29; benchI = 33; benchA = 43; benchE = 53;
+            squatB = 21; squatN = 38; squatI = 44; squatA = 59; squatE = 74;
+            deadB = 26; deadN = 48; deadI = 55; deadA = 79; deadE = 105;
+        } else if (weight < 44) {
+            benchB = 22; benchN = 29; benchI = 33; benchA = 43; benchE = 53;
+            squatB = 21; squatN = 38; squatI = 44; squatA = 59; squatE = 74;
+            deadB = 26; deadN = 48; deadI = 55; deadA = 79; deadE = 105;
+        }
     }
 
     // check the level by comparing
@@ -106,6 +141,105 @@ function calcWeight() {
         level = "Beginner";
     }
 
+    // highlight rank for each exercise
+    if (bench >= benchE) {
+        document.getElementById("benchE").style.backgroundColor = "yellow";
+        document.getElementById("benchA").style.backgroundColor = "transparent";
+        document.getElementById("benchI").style.backgroundColor = "transparent";
+        document.getElementById("benchN").style.backgroundColor = "transparent";
+        document.getElementById("benchB").style.backgroundColor = "transparent";
+    } else if (bench >= benchA) {
+        document.getElementById("benchE").style.backgroundColor = "transparent";
+        document.getElementById("benchA").style.backgroundColor = "yellow";
+        document.getElementById("benchI").style.backgroundColor = "transparent";
+        document.getElementById("benchN").style.backgroundColor = "transparent";
+        document.getElementById("benchB").style.backgroundColor = "transparent";
+    } else if (bench >= benchI) {
+        document.getElementById("benchE").style.backgroundColor = "transparent";
+        document.getElementById("benchA").style.backgroundColor = "transparent";
+        document.getElementById("benchI").style.backgroundColor = "yellow";
+        document.getElementById("benchN").style.backgroundColor = "transparent";
+        document.getElementById("benchB").style.backgroundColor = "transparent";
+    } else if (bench >= benchN) {
+        document.getElementById("benchE").style.backgroundColor = "transparent";
+        document.getElementById("benchA").style.backgroundColor = "transparent";
+        document.getElementById("benchI").style.backgroundColor = "transparent";
+        document.getElementById("benchN").style.backgroundColor = "yellow";
+        document.getElementById("benchB").style.backgroundColor = "transparent";
+    } else {
+        document.getElementById("benchE").style.backgroundColor = "transparent";
+        document.getElementById("benchA").style.backgroundColor = "transparent";
+        document.getElementById("benchI").style.backgroundColor = "transparent";
+        document.getElementById("benchN").style.backgroundColor = "transparent";
+        document.getElementById("benchB").style.backgroundColor = "yellow";
+    }
+
+    if (squat >= squatE) {
+        document.getElementById("squatE").style.backgroundColor = "yellow";
+        document.getElementById("squatA").style.backgroundColor = "transparent";
+        document.getElementById("squatI").style.backgroundColor = "transparent";
+        document.getElementById("squatN").style.backgroundColor = "transparent";
+        document.getElementById("squatB").style.backgroundColor = "transparent";
+    } else if (squat >= squatA) {
+        document.getElementById("squatE").style.backgroundColor = "transparent";
+        document.getElementById("squatA").style.backgroundColor = "yellow";
+        document.getElementById("squatI").style.backgroundColor = "transparent";
+        document.getElementById("squatN").style.backgroundColor = "transparent";
+        document.getElementById("squatB").style.backgroundColor = "transparent";
+    } else if (squat >= squatI) {
+        document.getElementById("squatE").style.backgroundColor = "transparent";
+        document.getElementById("squatA").style.backgroundColor = "transparent";
+        document.getElementById("squatI").style.backgroundColor = "yellow";
+        document.getElementById("squatN").style.backgroundColor = "transparent";
+        document.getElementById("squatB").style.backgroundColor = "transparent";
+    } else if (squat >= squatN) {
+        document.getElementById("squatE").style.backgroundColor = "transparent";
+        document.getElementById("squatA").style.backgroundColor = "transparent";
+        document.getElementById("squatI").style.backgroundColor = "transparent";
+        document.getElementById("squatN").style.backgroundColor = "yellow";
+        document.getElementById("squatB").style.backgroundColor = "transparent";
+    } else {
+        document.getElementById("squatE").style.backgroundColor = "transparent";
+        document.getElementById("squatA").style.backgroundColor = "transparent";
+        document.getElementById("squatI").style.backgroundColor = "transparent";
+        document.getElementById("squatN").style.backgroundColor = "transparent";
+        document.getElementById("squatB").style.backgroundColor = "yellow";
+    }
+
+    if (dead >= deadE) {
+        document.getElementById("deadE").style.backgroundColor = "yellow";
+        document.getElementById("deadA").style.backgroundColor = "transparent";
+        document.getElementById("deadI").style.backgroundColor = "transparent";
+        document.getElementById("deadN").style.backgroundColor = "transparent";
+        document.getElementById("deadB").style.backgroundColor = "transparent";
+    } else if (dead >= deadA) {
+        document.getElementById("deadE").style.backgroundColor = "transparent";
+        document.getElementById("deadA").style.backgroundColor = "yellow";
+        document.getElementById("deadI").style.backgroundColor = "transparent";
+        document.getElementById("deadN").style.backgroundColor = "transparent";
+        document.getElementById("deadB").style.backgroundColor = "transparent";
+    } else if (dead >= deadI) {
+        document.getElementById("deadE").style.backgroundColor = "transparent";
+        document.getElementById("deadA").style.backgroundColor = "transparent";
+        document.getElementById("deadI").style.backgroundColor = "yellow";
+        document.getElementById("deadN").style.backgroundColor = "transparent";
+        document.getElementById("deadB").style.backgroundColor = "transparent";
+    } else if (dead >= deadN) {
+        document.getElementById("deadE").style.backgroundColor = "transparent";
+        document.getElementById("deadA").style.backgroundColor = "transparent";
+        document.getElementById("deadI").style.backgroundColor = "transparent";
+        document.getElementById("deadN").style.backgroundColor = "yellow";
+        document.getElementById("deadB").style.backgroundColor = "transparent";
+    } else {
+        document.getElementById("deadE").style.backgroundColor = "transparent";
+        document.getElementById("deadA").style.backgroundColor = "transparent";
+        document.getElementById("deadI").style.backgroundColor = "transparent";
+        document.getElementById("deadN").style.backgroundColor = "transparent";
+        document.getElementById("deadB").style.backgroundColor = "yellow";
+    }
+    
+
+    // print out
     document.getElementById("dis").innerHTML = total + " KG";
     document.getElementById("level").innerHTML = level;
 
