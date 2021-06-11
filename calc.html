@@ -72,11 +72,11 @@
                     <div class="form-group row">
                         <div class="col-sm-5">
                             <br>
-                            <button type="button" onclick="calcOneRep()" class="btn btn-primary">Calculate</button>
+                            <button type="button" onclick="calcOneRep()" class="btn btn-dark">Calculate</button>
                             <br>
                             <br>
                             <h3>Your 1 rep maximum weight is <p id="onerep"></p> </h3>
-                            <table>
+                            <table class="table">
                                 <tr>
                                     <th>Repetition</th>
                                     <th>Weight  </th>
@@ -112,7 +112,7 @@
                         <div class="col-sm-1"></div>
                         <div class="col-sm-6">
                             <br>
-                            <button type="button" onclick="compare()" class="btn btn-primary">Calculate</button>
+                            <button type="button" onclick="compare()" class="btn btn-dark">Calculate</button>
                             <br>
                             <br>
                             <h4>Total Volume of First Workout: <p id="work1"></p></h4>
@@ -132,28 +132,62 @@
                         <div class="col-sm-4">
                             Weight<input type="number" class="form-control" id="warmup" placeholder="Enter weight for first workout">
                             <br>
-                            Choose Exercise
+                            <h5>Choose Exercise</h5>
                         </div>
                         <div class="col-sm-4"></div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-2">
-                            <button type="button" onclick="squat()" class="btn btn-primary">Squat</button>
+                            <button type="button" onclick="squat()" class="btn btn-dark">Squat</button>
                         </div>
                         <div class="col-sm-2">
-                            <button type="button" onclick="bench()" class="btn btn-primary">Bench Press</button>
+                            <button type="button" onclick="bench()" class="btn btn-dark">Bench Press</button>
                         </div>
                         <div class="col-sm-2">
-                            <button type="button" onclick="dead()" class="btn btn-primary">Deadlift</button>
+                            <button type="button" onclick="dead()" class="btn btn-dark">Deadlift</button>
                         </div>
                         <div class="col-sm-2">
-                            <button type="button" onclick="overhead()" class="btn btn-primary">Overhead Press</button>
+                            <button type="button" onclick="overhead()" class="btn btn-dark">Overhead Press</button>
                         </div>
                         <div class="col-sm-2">
-                            <button type="button" onclick="bRow()" class="btn btn-primary">Barbell Row</button>
+                            <button type="button" onclick="bRow()" class="btn btn-dark">Barbell Row</button>
                         </div>
                         <div class="col-sm-1"></div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row" id="warmupTable">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <table class="table">
+                                <tr>
+                                    <th>Set/Rep</th>
+                                    <th>Weight</th>
+                                </tr>
+                                <tr>
+                                    <th>2 x 5</th>
+                                    <th id="WU1"></th>
+                                </tr>
+                                <tr>
+                                    <th>1 X 5</th>
+                                    <th id="WU2"></th>
+                                </tr>
+                                <tr>
+                                    <th>1 X 3</th>
+                                    <th id="WU3"></th>
+                                </tr>
+                                <tr>
+                                    <th>1 X 2</th>
+                                    <th id="WU4"></th>
+                                </tr>
+                                <tr>
+                                    <th>Work Set</th>
+                                    <th id="WU5"></th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-3"></div>
                     </div>
                 </form>
                 <br>

@@ -86,9 +86,79 @@ function squat() {
     var four = weight * 0.8;
     var five = weight;
 
-    document.getElementById("work1").innerHTML = one + "KG";
-    document.getElementById("work1").innerHTML = two + "KG";
-    document.getElementById("work1").innerHTML = three + "KG";
-    document.getElementById("work1").innerHTML = four + "KG";
-    document.getElementById("work1").innerHTML = five + "KG";
+    document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
+    document.getElementById("WU2").innerHTML = two.toFixed(0) + "KG";
+    document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
+    document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
+    document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";
+}
+
+function bench() {
+    document.getElementById("warmup").submit;
+
+    var weight = parseInt(document.getElementById("warmup").value);
+
+    var one = 20;
+    var two = weight * 0.5;
+    var three = weight * 0.7;
+    var four = weight * 0.9;
+    var five = weight;
+
+    document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
+    document.getElementById("WU2").innerHTML = two.toFixed(0) + "KG";
+    document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
+    document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
+    document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";
+}
+
+function dead() {
+    document.getElementById("warmup").submit;
+
+    var weight = parseInt(document.getElementById("warmup").value);
+
+    var one = weight * 0.4;
+    var three = weight * 0.6;
+    var four = weight * 0.85;
+    var five = weight;
+
+    document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
+    document.getElementById("WU2").innerHTML = "SKIP";
+    document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
+    document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
+    document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";
+}
+
+function overhead() {
+    document.getElementById("warmup").submit;
+
+    var weight = parseInt(document.getElementById("warmup").value);
+
+    var one = 20;
+    var two = weight * 0.55;
+    var three = weight * 0.7;
+    var four = weight * 0.85;
+    var five = weight;
+
+    document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
+    document.getElementById("WU2").innerHTML = two.toFixed(0) + "KG";
+    document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
+    document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
+    document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";
+}
+
+function bRow() {
+    document.getElementById("warmup").submit;
+
+    var weight = parseInt(document.getElementById("warmup").value);
+
+    var one = weight * 0.4;
+    var three = weight * 0.7;
+    var four = weight * 0.9;
+    var five = weight;
+
+    document.getElementById("WU1").innerHTML = one.toFixed(0) + "KG";
+    document.getElementById("WU2").innerHTML = "SKIP";
+    document.getElementById("WU3").innerHTML = three.toFixed(0) + "KG";
+    document.getElementById("WU4").innerHTML = four.toFixed(0) + "KG";
+    document.getElementById("WU5").innerHTML = five.toFixed(0) + "KG";
 }
