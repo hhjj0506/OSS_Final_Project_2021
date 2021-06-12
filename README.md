@@ -40,3 +40,4 @@ There are more contact information at the bottom of the website.
 Did not use anyone else's code.
 
 # Link to presentation video
+You can watch a presentation video about this project here (https://youtu.be/KA94PXRyy7Y)
